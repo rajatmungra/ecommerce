@@ -32,7 +32,7 @@ router.post('/create-checkout-session', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items:line,
       mode: 'payment',
-      success_url: `${process.env.CLIENT_URL}/checkout-success`,
+      success_url: 'https://ecom-frontend-livid.vercel.app/checkout-success',
       cancel_url: `${process.env.CLIENT_URL}/cancel`,
     });
   
