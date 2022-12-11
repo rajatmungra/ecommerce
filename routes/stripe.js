@@ -33,7 +33,7 @@ router.post('/create-checkout-session', async (req, res) => {
       line_items:line,
       mode: 'payment',
       success_url: 'https://ecom-frontend-livid.vercel.app/checkout-success',
-      cancel_url: `${process.env.CLIENT_URL}/cancel`,
+      cancel_url: 'https://ecom-frontend-livid.vercel.app/cancel',
     });
   
     res.send({url : session.url});
