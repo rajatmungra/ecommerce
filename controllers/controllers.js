@@ -5,8 +5,8 @@ import axios from "axios";
 
 export const fetchProducts = async (req,res)=>{
     try{
-        //const Products = await Product.find();
-        const Products = await axios.get('https://dummyjson.com/products');
+        const Products = await Product.find();
+        // const Products = await axios.get('https://dummyjson.com/products');
          res.status(200).json(Products.data.products);
     }
     catch(error){
